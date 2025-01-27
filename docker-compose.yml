@@ -1,9 +1,8 @@
-version: "3.8"
-
 services:
   scraper:
-    build: .
     container_name: scraper
+    image: ghcr.io/ak-karimzai/selenium-docker-scraper
+    # build: .
     volumes:
       - ./domains.txt:/app/domains.txt
     environment:
