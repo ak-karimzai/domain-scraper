@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  scraper:
+    build: .
+    container_name: scraper
+    volumes:
+      - ./domains.txt:/app/domains.txt
+    environment:
+      - DISPLAY=:99
+    # restart: always
+
+    # docker cp scraper:/app/extracted_data.json ./extracted_data.json
